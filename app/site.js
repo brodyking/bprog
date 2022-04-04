@@ -25,11 +25,22 @@ function openTab(tabName) {
             openTab('testTab')
             changeTabLinkActive("testTabLink");
         };
+        // Link on Test Tab
+        document.getElementById("testTabStartButton").onclick = function() {
+            startCompile();
+        };
     // Options Tab
         document.getElementById("optionsTabLink").onclick = function() {
             openTab('optionsTab')
             changeTabLinkActive("optionsTabLink");
         };
+        // Link on Options Tab
+            document.getElementById("devTabTestButton").onclick = function() {
+                openTab('testTab');
+                startCompile();
+                changeTabLinkActive("testTabLink");
+            };
+            
     // Start First Page
     openTab('devTab');
     changeTabLinkActive("devTabLink");
