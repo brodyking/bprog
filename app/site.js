@@ -44,3 +44,17 @@ function openTab(tabName) {
     // Start First Page
     openTab('devTab');
     changeTabLinkActive("devTabLink");
+
+    // Options Page ReadME Link
+      // Get readme file data
+      function optionsTabGetReadmeData() {
+        fetch('README.md')
+        .then(response => response.text())
+        .then((data) => {
+          document.getElementById('optionsTabREADME').innerHTML = data;
+        })
+      }
+      // Create element to display readme to.
+      function optionsTabCreateReadmeViewer
+        document.getElementById('optionsTab').innerHTML += "<div id='optionsTabREADME'></div>";
+      }

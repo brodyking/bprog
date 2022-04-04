@@ -119,7 +119,7 @@ function startCompile() {
                 // Commands
                 commands["echo"] = "document.getElementById('testTabConsole').innerHTML += '" + document.getElementById('devInput').value.split(';')[i].slice(6,Infinity) + "<br>'";
                 commands["#"] = "//do nothing, its a comment."
-
+                commands["clear"] = "document.getElementById('testTabConsole').innerHTML = '';";
                 eval(commands[compileLineCount[i].slice(1,compileLineCount[i].search(" "))]);
             }
     }
@@ -127,3 +127,4 @@ function startCompile() {
 
 commands["echo"] = "// declared";
 commands["#"] = "// declared";
+commands["clear"] = "// declared";
